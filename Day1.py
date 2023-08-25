@@ -6,6 +6,7 @@ def BruteForce(nums: list, k : int) -> bool:
             if x + y == k:
                 return True
     return False
+# Time Complexity of O(n^2)
 
 def SmartSol(nums: list, k : int) -> bool:
     valdict = set()
@@ -16,6 +17,8 @@ def SmartSol(nums: list, k : int) -> bool:
         else:
             valdict.add(i)
     return False
+
+# Time Complexity of O(n)
 
 if __name__ == "__main__":
     print(BruteForce([10,5], 15))
