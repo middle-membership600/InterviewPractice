@@ -37,3 +37,6 @@ if __name__ == "__main__":
     # print("Hello World")
     print(DumbSol([3, 4, -1, 1]))
     print(SmartSol([3, 4, -1, 1]))
+    example = [[1,2,3],[2,3,4],[5,6,7]]
+    flatexample = [i for sublist in example for i in sublist]
+    print(flatexample)
