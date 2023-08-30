@@ -3,3 +3,5 @@ class Node(ptr = None, next = None, index = 0,both = False):
         next = get_pointer()
 
     self.val = dereference_pointer(ptr)
+
+    
