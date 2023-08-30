@@ -10,10 +10,10 @@ def SmartSol(msg : str) -> int:
         elif msglist[0] >= '3':
             return 1 * RecSol(msglist[1:])
         else:
-            return 1 + RecSol(msglist[1:]) + RecSol(msglist[2:])
+            return RecSol(msglist[1:]) + RecSol(msglist[2:])
     return RecSol(msglist)   
 
 # not fully getting recursion
 
 if __name__ == '__main__':
-    print(SmartSol('12345'))
+    print(SmartSol('1111'))
