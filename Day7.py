@@ -1,16 +1,17 @@
 def SmartSol(msg : str) -> int:
     msglist = list(msg)
+    total = 0
     def RecSol(msglist : list[int]) -> int:
-        if not msglist:
+        global total
+        if msglist[0] == '0':
             return 0
-        elif len(msglist) == 1:
+        elif len(msglist) <= 1: # This covers empty string
             return 1
-        elif msglist[1] == '0':
-            return 1 * RecSol(msglist[2:])
-        elif msglist[0] >= '3':
-            return 1 * RecSol(msglist[1:])
-        else:
-            return RecSol(msglist[1:]) + RecSol(msglist[2:])
+        if int(s[:2]) <= 26:
+            total += RecSol(msglist[2:])
+
+        total += RecSol(msglist[1:])
+        
     return RecSol(msglist)   
 
 # not fully getting recursion
